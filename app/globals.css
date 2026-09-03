@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #f7efdf;
+  --color-cream-light: #fdf9ef;
+  --color-bark: #3c2e24;
+  --color-rust: #b5502c;
+  --color-rust-dark: #8f3d21;
+  --color-amber: #e8a33d;
+  --color-dusk: #241d2e;
+  --color-dusk-light: #382c43;
+  --color-moss: #5c6b4e;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-cream-light: var(--color-cream-light);
+  --color-bark: var(--color-bark);
+  --color-rust: var(--color-rust);
+  --color-rust-dark: var(--color-rust-dark);
+  --color-amber: var(--color-amber);
+  --color-dusk: var(--color-dusk);
+  --color-dusk-light: var(--color-dusk-light);
+  --color-moss: var(--color-moss);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-karla);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-bark);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-bark);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.bulb {
+  animation: twinkle 2.4s ease-in-out infinite;
+}
